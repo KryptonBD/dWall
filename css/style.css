@@ -1,0 +1,118 @@
+/*
+COLORS
+*/
+/*
+    Global Reset
+*/
+* {
+  margin: 0;
+  padding: 0; }
+  *, *::before, *::after {
+    box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #777; }
+
+.heading-primary {
+  font-size: 4rem;
+  color: #fff;
+  letter-spacing: 2px; }
+  .heading-primary__top {
+    display: inline-block; }
+    .heading-primary__top--highlight {
+      color: #ffc300; }
+  .heading-primary__bottom {
+    display: block; }
+
+.heading-subtitle {
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 1px; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.btn, .btn:link, .btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+  border-radius: .5rem;
+  font-weight: 600;
+  letter-spacing: 2px; }
+
+.btn--yellow {
+  color: #fff;
+  background: #ffc300;
+  border: 2px solid transparent;
+  transition: all .3s; }
+  .btn--yellow:hover {
+    border-color: #ffc300;
+    background: transparent;
+    color: #ffc300; }
+  .btn--yellow:focus, .btn--yellow:active {
+    transform: translateY(2px); }
+
+.header {
+  width: 100%; }
+  .header__top {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-around;
+    background: #ccc;
+    color: #777;
+    font-size: 1.4rem;
+    letter-spacing: 1px; }
+  .header__nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25); }
+  .header__logo {
+    cursor: pointer; }
+    .header__logo img {
+      width: 20rem; }
+  .header__menu-list {
+    list-style: none; }
+  .header__menu-item {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    backface-visibility: hidden;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    transition: all 0.3s; }
+    .header__menu-item:hover {
+      border: 1px solid #ccc;
+      box-shadow: inset 4px 2px 8px; }
+    .header__menu-item:active, .header__menu-item:focus {
+      box-shadow: inset 2px 1px 4px;
+      transform: scale(1.05); }
+  .header__menu-link {
+    text-decoration: none;
+    color: #333; }
+
+.home {
+  width: 100vw;
+  height: 80vh;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)), url(../img/bg1.jpg);
+  background-size: cover;
+  padding: 2.5rem;
+  position: relative; }
+  .home__text-box {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0%, -50%); }

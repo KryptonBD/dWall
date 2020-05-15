@@ -1,0 +1,74 @@
+.header {
+  width: 100%;
+  //padding: 2rem;
+  &__top {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-around;
+    background: $color-grey-light;
+    color: $color-grey-dark-2;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: $color-white;
+    padding: 1rem 0;
+    box-shadow: 0 1rem 4rem rgba($color-black, .25);
+  }
+
+  &__logo {
+    cursor: pointer;
+    img {
+      width: 20rem;
+    }
+  }
+
+  &__menu {
+    &-list {
+      list-style: none;
+    }
+    &-item {
+      display: inline-block;
+      padding: 1rem 2rem;
+      font-size: 2rem;
+      cursor: pointer;
+      backface-visibility: hidden;
+      border: 1px solid transparent;
+      border-radius: 1rem;
+      transition: all 0.3s;
+
+      &:hover {
+        border: 1px solid $color-grey-light;
+        box-shadow: inset 4px 2px 8px;
+      }
+
+      &:active,
+      &:focus {
+        box-shadow: inset 2px 1px 4px;
+        transform: scale(1.05);
+      }
+    }
+    &-link {
+      text-decoration: none;
+      color: $color-grey-dark-1;
+    }
+  }
+}
+.home {
+  width: 100vw;
+  height: 80vh;
+  background-image: linear-gradient(to right, rgba($color-black, .75), rgba($color-black, .25)), url(../img/bg1.jpg);
+  background-size: cover;
+  padding: 2.5rem;
+  position: relative;
+  &__text-box{
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: translate(0%, -50%);
+  }
+}

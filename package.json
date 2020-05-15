@@ -1,0 +1,17 @@
+{
+  "name": "dwall",
+  "version": "1.0.0",
+  "description": "quality workmanship provider",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass"
+  },
+  "author": "foysol",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.1"
+  }
+}

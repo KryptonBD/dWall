@@ -1,60 +1,103 @@
-.heading-primary{
+.heading-primary {
     font-size: 4rem;
     color: $color-white;
     letter-spacing: 2px;
-    &__top{
+    &__top {
         display: inline-block;
-        &--highlight{
+        &--highlight {
             color: $color-primary;
         }
     }
 
-    &__bottom{
+    &__bottom {
         display: block;
     }
 }
 
-.heading-subtitle{
+.heading-subtitle {
     color: $color-white;
     font-size: 2rem;
     letter-spacing: 1px;
-
 }
 
-.u-margin-bottom-small{ 
+.u-margin-bottom-small {
     margin-bottom: 1.5rem;
 }
 
-.btn{
+.text-dark{
+    color: $color-black;
+}
+
+.btn {
     &,
     &:link,
-    &:visited{
+    &:visited {
         text-decoration: none;
         text-transform: uppercase;
         padding: 1.5rem 4rem;
         display: inline-block;
-        font-size: 1.6rem;
-        
+        font-size: 2rem;
+
         margin-top: 2rem;
-        border-radius: .5rem;
+        border-radius: 5rem;
         font-weight: 600;
         letter-spacing: 2px;
     }
 
-    &--yellow{
+    &--yellow {
         color: $color-white;
         background: $color-primary;
         border: 2px solid transparent;
-        transition: all .3s;
-        &:hover{
+        transition: all 0.3s;
+        &:hover {
             border-color: $color-primary;
             background: transparent;
             color: $color-primary;
         }
 
         &:focus,
-        &:active{
+        &:active {
             transform: translateY(2px);
+        }
+    }
+}
+
+.about {
+    &__info {
+        display: flex;
+        margin-bottom: 1.8rem;
+        &-img {
+            img {
+                width: 18rem;
+                height: auto;
+                box-shadow: 0 1rem 2rem rgba($color-black, $alpha: .2);
+            }
+            
+        }
+
+        &-text{
+            padding: 0 2.5rem;
+        }
+        &-headline{
+            color: $color-grey-dark-1;
+            font-weight: 600;
+        }
+
+        &-desc{
+            font-size: 1.5rem;  
+        }
+
+        .readmore{
+            display: block;
+            color: $color-primary;
+            font-weight: 600;
+            letter-spacing: .8px;
+            cursor: pointer;
+            transition: transform .2s;
+
+            &:hover{
+                transform: translateX(3px);
+            }
         }
     }
 }

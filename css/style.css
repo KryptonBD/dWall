@@ -2,9 +2,7 @@
 COLORS
 */
 /*
-*TODO
- -800px smaller font size
- -600px hide menu 
+    Screen Sizes
 */
 /*
     Global Reset
@@ -44,6 +42,12 @@ body {
   font-size: 2rem;
   letter-spacing: 1px; }
 
+.heading-secondary {
+  font-size: 3rem;
+  color: #fff;
+  letter-spacing: 1.5px;
+  text-transform: uppercase; }
+
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
 
@@ -76,12 +80,23 @@ body {
 .about__info {
   display: flex;
   margin-bottom: 1.8rem; }
+  @media only screen and (max-width: 31.25em) {
+    .about__info {
+      flex-direction: column; } }
   .about__info-img img {
     width: 18rem;
     height: auto;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    @media only screen and (max-width: 31.25em) {
+      .about__info-img img {
+        width: 100%;
+        margin-bottom: 2rem; } }
   .about__info-text {
     padding: 0 2.5rem; }
+    @media only screen and (max-width: 31.25em) {
+      .about__info-text {
+        padding: 0;
+        margin-bottom: 2rem; } }
   .about__info-headline {
     color: #333;
     font-weight: 600; }
@@ -96,6 +111,72 @@ body {
     transition: transform .2s; }
     .about__info .readmore:hover {
       transform: translateX(3px); }
+
+.projects__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 0; }
+  @media only screen and (max-width: 37.5em) {
+    .projects__list {
+      flex-wrap: wrap; } }
+  @media only screen and (max-width: 31.25em) {
+    .projects__list {
+      flex-direction: column; } }
+
+.projects__item {
+  width: 24%;
+  border: 2px solid transparent;
+  position: relative;
+  transition: all .3s;
+  border-radius: .5rem;
+  text-align: center;
+  cursor: pointer; }
+  @media only screen and (max-width: 37.5em) {
+    .projects__item {
+      width: 45%;
+      height: 25rem; }
+      .projects__item:not(:last-child) {
+        margin-bottom: 3.5rem; } }
+  @media only screen and (max-width: 31.25em) {
+    .projects__item {
+      width: 100%; } }
+  .projects__item-icon {
+    padding: .8rem;
+    background-color: #ffc300;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .projects__item-icon-svg {
+      width: 1.8rem;
+      height: 1.8rem;
+      fill: #fff; }
+  .projects__item img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0; }
+  .projects__item-title {
+    font-size: 1.8rem;
+    color: #fff;
+    opacity: 0;
+    transition: all .3s; }
+    @media only screen and (max-width: 37.5em) {
+      .projects__item-title {
+        font-size: 2.2rem; } }
+  .projects__item:hover {
+    border-color: #ffc300;
+    background-color: #000; }
+    .projects__item:hover img {
+      opacity: .3; }
+  .projects__item:hover .projects__item-icon {
+    display: inline-block; }
+  .projects__item:hover .projects__item-title {
+    opacity: 1;
+    transform: translateY(-4rem); }
+  .projects__item:active {
+    transform: scale(1.08); }
 
 .header {
   width: 100%;
@@ -181,6 +262,9 @@ main {
     .about {
       padding: 5rem 8rem;
       flex-direction: column; } }
+  @media only screen and (max-width: 31.25em) {
+    .about {
+      padding: 5rem 3rem 3rem 3rem; } }
   .about__left {
     flex: 0 0 50%;
     padding-right: 5rem; }
@@ -205,21 +289,40 @@ main {
     text-align: center;
     transition: transform .8s;
     cursor: pointer;
-    background: #fff; }
+    background: #fff;
+    overflow: hidden; }
     .services__item img {
       width: 100%;
       height: 20rem;
-      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+      border-radius: .8rem; }
       @media only screen and (max-width: 37.5em) {
         .services__item img {
           height: auto; } }
     .services__item h3 {
       font-size: 2.5rem;
-      font-weight: 300; }
+      font-weight: 300;
+      background: #fff;
+      transition: all .5s .2s; }
     .services__item:hover {
       transform: scale(1.1) translateY(-10px); }
+    .services__item:hover h3 {
+      transform: translateY(-8rem) rotate(-5deg);
+      width: 110%;
+      margin-left: -15px;
+      color: #000;
+      font-weight: 400; }
     @media only screen and (max-width: 37.5em) {
       .services__item {
         width: 100%; }
         .services__item:not(:last-child) {
           margin-bottom: 3.5rem; } }
+
+.projects {
+  padding: 8rem 15rem;
+  background-image: linear-gradient(120deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url("../img/bg2.jpg");
+  background-size: cover;
+  background-position: center; }
+  @media only screen and (max-width: 56.25em) {
+    .projects {
+      padding: 5rem 8rem; } }

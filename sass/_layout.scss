@@ -252,3 +252,25 @@ main{
        flex-direction: column;
     }
 }
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: $color-primary;
+    padding: 2rem 8rem;
+    color: $color-black;
+    font-size: 1.5rem;
+    margin-top: -2rem;
+    .copytext {
+        span{
+            display: inline-block;
+            font-size: 110%;
+            transform: rotate(180deg);
+        }
+    }
+    @media only screen and (max-width: $bp-small) {
+        padding: 2rem 5rem;
+        font-size: 1.2rem;
+    }
+}

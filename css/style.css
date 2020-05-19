@@ -392,11 +392,16 @@ body {
         .queries__insta-stories > * {
           margin-right: .5rem; } }
 
+.container {
+  max-width: 140rem;
+  margin: 0 auto; }
+
 /* ///////////////////////
     Header
 ////////////////////////// */
 .header {
   width: 100%;
+  max-width: 140rem;
   position: fixed;
   z-index: 10; }
   .header__top {

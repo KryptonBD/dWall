@@ -1,8 +1,13 @@
+.container{
+    max-width: 140rem;
+    margin: 0 auto;
+}
 /* ///////////////////////
     Header
 ////////////////////////// */
 .header {
     width: 100%;
+    max-width: 140rem;
     position: fixed;
     z-index: 10;
     &__top {

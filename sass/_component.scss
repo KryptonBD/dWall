@@ -385,6 +385,10 @@
         font-family: inherit;
         width: 50%;
         border: 2px solid $color-grey-light;
+        @media only screen and (min-width: 1300px) {
+            width: 56%;
+        }
+
         @media only screen and (max-width: $bp-medium) {
             width: 40%;
         }

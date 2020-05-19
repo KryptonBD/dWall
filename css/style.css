@@ -326,6 +326,9 @@ body {
     font-family: inherit;
     width: 50%;
     border: 2px solid #ccc; }
+    @media only screen and (min-width: 1300px) {
+      .contact-box__input {
+        width: 56%; } }
     @media only screen and (max-width: 56.25em) {
       .contact-box__input {
         width: 40%; } }

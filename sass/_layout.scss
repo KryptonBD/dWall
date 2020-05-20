@@ -9,9 +9,9 @@
     width: 100%;
     max-width: 140rem;
     position: fixed;
-    z-index: 10;
+    z-index: 5;
     &__top {
-        padding: 2rem 0;
+        padding: 1rem 0;
         display: flex;
         justify-content: space-around;
         background: $color-grey-light;
@@ -34,7 +34,7 @@
         justify-content: space-around;
         align-items: center;
         background: $color-white;
-        padding: 1rem 0;
+        padding: 0;
         box-shadow: 0 1rem 4rem rgba($color-black, 0.25);
 
         @media only screen and (max-width: $bp-small) {
@@ -59,9 +59,11 @@
             font-size: 2rem;
             cursor: pointer;
             backface-visibility: hidden;
-            border: 1px solid transparent;
             border-radius: 1rem;
             transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            
             @media only screen and (max-width: $bp-large) {
                 font-size: 1.8rem;
             }
@@ -69,20 +71,49 @@
                 font-size: 1.2rem;
             }
 
-            &:hover {
-                border: 1px solid $color-grey-light;
-                box-shadow: inset 4px 2px 8px;
+            // &:hover {
+            //     border: 1px solid $color-grey-light;
+            //     box-shadow: inset 4px 2px 8px;
+            // }
+
+            // &:active,
+            // &:focus {
+            //     box-shadow: inset 2px 1px 4px;
+            //     transform: scale(1.05);
+            // }
+            &::before{
+                background: $color-primary;
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 0;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+                z-index: 6;
+                transition: all .8s ease;
             }
 
+            &:hover::before{
+                height: 300%;
+            }
             &:active,
             &:focus {
-                box-shadow: inset 2px 1px 4px;
-                transform: scale(1.05);
+                box-shadow: 0 1rem 1.5rem rgba($color-black, .2);
+                transform: scale(.95);
             }
         }
+        
         &-link {
             text-decoration: none;
             color: $color-grey-dark-1;
+            position: relative;
+            z-index: 7;
+            transition: color .5s;
+        }
+
+        &-item:hover &-link{
+            color: $color-white;
         }
     }
 }

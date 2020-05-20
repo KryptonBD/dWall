@@ -62,6 +62,11 @@ body {
 .text-dark {
   color: #000; }
 
+.bold__text {
+  font-weight: 600;
+  letter-spacing: .8px;
+  font-size: 105%; }
+
 .btn, .btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
@@ -406,9 +411,9 @@ body {
   width: 100%;
   max-width: 140rem;
   position: fixed;
-  z-index: 10; }
+  z-index: 5; }
   .header__top {
-    padding: 2rem 0;
+    padding: 1rem 0;
     display: flex;
     justify-content: space-around;
     background: #ccc;
@@ -427,7 +432,7 @@ body {
     justify-content: space-around;
     align-items: center;
     background: #fff;
-    padding: 1rem 0;
+    padding: 0;
     box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25); }
     @media only screen and (max-width: 37.5em) {
       .header__nav {
@@ -444,24 +449,40 @@ body {
     font-size: 2rem;
     cursor: pointer;
     backface-visibility: hidden;
-    border: 1px solid transparent;
     border-radius: 1rem;
-    transition: all 0.3s; }
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden; }
     @media only screen and (max-width: 68.75em) {
       .header__menu-item {
         font-size: 1.8rem; } }
     @media only screen and (max-width: 31.25em) {
       .header__menu-item {
         font-size: 1.2rem; } }
-    .header__menu-item:hover {
-      border: 1px solid #ccc;
-      box-shadow: inset 4px 2px 8px; }
+    .header__menu-item::before {
+      background: #ffc300;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      z-index: 6;
+      transition: all .8s ease; }
+    .header__menu-item:hover::before {
+      height: 300%; }
     .header__menu-item:active, .header__menu-item:focus {
-      box-shadow: inset 2px 1px 4px;
-      transform: scale(1.05); }
+      box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2);
+      transform: scale(0.95); }
   .header__menu-link {
     text-decoration: none;
-    color: #333; }
+    color: #333;
+    position: relative;
+    z-index: 7;
+    transition: color .5s; }
+  .header__menu-item:hover .header__menu-link {
+    color: #fff; }
 
 main {
   padding-top: 10rem; }

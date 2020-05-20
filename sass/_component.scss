@@ -43,6 +43,12 @@
     color: $color-black;
 }
 
+.bold__text{
+    font-weight: 600;
+    letter-spacing: .8px;
+    font-size: 105%;
+}
+
 .btn {
     &,
     &:link,

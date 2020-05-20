@@ -78,17 +78,34 @@ body {
 
 .btn--yellow {
   color: #fff;
-  background: #ffc300;
   border-radius: 5rem;
   border: 2px solid transparent;
   transition: all 0.3s;
   margin-top: 2rem; }
-  .btn--yellow:hover {
-    border-color: #ffc300;
-    background: transparent;
-    color: #ffc300; }
   .btn--yellow:focus, .btn--yellow:active {
     transform: translateY(2px); }
+
+.btn--animation {
+  position: relative;
+  overflow: hidden;
+  transition: all .8s; }
+  .btn--animation::before {
+    background: #ffc300;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 300%;
+    top: 50%;
+    left: 50%;
+    border-radius: 4rem;
+    z-index: -1;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 1s; }
+  .btn--animation:hover::before {
+    transform: translate(-50rem, -15rem); }
+  .btn--animation:hover {
+    border: 2px solid #ffc300;
+    color: #ffc300; }
 
 .about__info {
   display: flex;
